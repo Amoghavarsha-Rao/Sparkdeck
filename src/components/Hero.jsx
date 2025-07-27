@@ -1,9 +1,15 @@
-
+import { useNavigate } from 'react-router-dom';
 import logo from '../assets/White Logo SVG.svg';
 import bookmarkIcon from '../assets/Bookmark Icon.svg';
 import './Hero.css';
 
 function Hero() {
+  const navigate = useNavigate(); // ⚡️ Used to change route
+
+  const handleGenerateClick = () => {
+    navigate('/loading'); // ⛳️ Navigate to loading page
+  };
+
   return (
     <>
       <div className="top-bar">
@@ -34,8 +40,12 @@ function Hero() {
               Generate:
             </p>
 
-            <button className="generate-button">Factcards</button>
-            <button className="generate-button">Flashcards</button>
+            <button className="generate-button" onClick={handleGenerateClick}>
+              Factcards
+            </button>
+            <button className="generate-button" onClick={handleGenerateClick}>
+              Flashcards
+            </button>
           </div>
         </div>
       </main>

@@ -1,0 +1,107 @@
+/* full‑screen centered container */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #1a1a1a;
+  overflow: hidden;
+}
+
+/* three overlapping cards */
+.card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 250px;
+  height: 180px;
+  stroke-width: 1%;
+  stroke: #1a1a1a;
+  background: #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform-origin: center center;
+  opacity: 0;
+  animation: cycle 4s infinite ease-in-out;
+}
+
+/* stagger their start times */
+.card1 { animation-delay: 0s;
+     }
+.card2 { animation-delay: 1s;
+     }
+.card3 { animation-delay: 2s;
+     }
+.card4 { animation-delay: 3s;
+    }
+
+/* loading text */
+.loading-text {
+  position: relative;
+  margin-top: 240px;
+  color: #eee;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+}
+
+
+@keyframes cycle {
+
+  0% {
+    opacity: 0;
+    transform: 
+      translate(-50%, -40%)
+      rotate(42deg)
+      skewX(-15deg)
+      skewY(-30deg)
+      scale(0.7);
+    /* transition: ease-in;   */
+  }
+
+  25% {
+    opacity: 1;
+    transform: 
+      translate(-50%, -50%)
+      rotate(42deg)
+      skewX(-15deg)
+      skewY(-30deg)
+      scale(0.7);
+      z-index: 1;
+  }
+
+  50% {
+    opacity: 1;
+    transform: 
+      translate(-50%, -65%)
+      rotate(42deg)
+      skewX(-15deg)
+      skewY(-30deg)
+      scale(0.7);
+      z-index: 2;
+  }
+
+  75% {
+    opacity: 1;
+    transform: 
+      translate(-50%, -80%)
+      rotate(42deg)
+      skewX(-15deg)
+      skewY(-30deg)
+      scale(0.7);
+    z-index: 3;
+  }
+
+  100% {
+    opacity: 0;
+    transform: 
+      translate(-50%, -95%)
+      rotate(42deg)
+      skewX(-15deg)
+      skewY(-30deg)
+      scale(0.7);
+    /* transition: ease-out; */
+    z-index: 4;
+  }
+}
+
