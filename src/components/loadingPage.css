@@ -93,15 +93,27 @@
   }
 
   100% {
-    opacity: 0;
+    opacity: 00;
     transform: 
-      translate(-50%, -95%)
+      translate(-200%, -105%)
       rotate(42deg)
       skewX(-15deg)
       skewY(-30deg)
       scale(0.7);
-    /* transition: ease-out; */
+    transition: ease-out;
     z-index: 4;
   }
+  /* make the top card go top right diagonally */
+  /* 100% {
+    opacity: 0;
+    transform: 
+      translate(200%, -320%)
+      rotate(42deg)
+      skewX(-15deg)
+      skewY(-30deg)
+      scale(0.7);
+    transition: ease-out;
+    z-index: 4;
+  } */
 }
 
