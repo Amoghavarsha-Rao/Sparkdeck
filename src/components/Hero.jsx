@@ -41,7 +41,7 @@ function Hero() {
             </p>
 
             <button className="generate-button" onClick={handleGenerateClick}>
-              Factcards
+              Summary Cards
             </button>
             <button className="generate-button" onClick={handleGenerateClick}>
               Flashcards

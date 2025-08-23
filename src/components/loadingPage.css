@@ -23,17 +23,17 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transform-origin: center center;
   opacity: 0;
-  animation: cycle 4s infinite ease-in-out;
+  animation: cycle 3s infinite ease-in-out;
 }
 
 /* stagger their start times */
 .card1 { animation-delay: 0s;
      }
-.card2 { animation-delay: 1s;
+.card2 { animation-delay: 0.75s;
      }
-.card3 { animation-delay: 2s;
+.card3 { animation-delay: 1.5s;
      }
-.card4 { animation-delay: 3s;
+.card4 { animation-delay: 2.25s;
     }
 
 /* loading text */

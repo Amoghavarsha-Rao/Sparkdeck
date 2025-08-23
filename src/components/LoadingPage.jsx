@@ -10,7 +10,7 @@ export default function LoadingPage() {
       <div className="card card2" />
       <div className="card card1" />
 
-      <p className="loading-text">Generating flashcards...</p>
+      <p className="loading-text">Generating flashcards</p>
     </div>
   );
 }
