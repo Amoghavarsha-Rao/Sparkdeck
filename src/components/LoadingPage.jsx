@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
 import { generateCards } from '../utils/generateCards';
-import './LoadingPage.css';
+import './loadingPage.css';
 
 export default function LoadingPage() {
   const navigate = useNavigate();
