@@ -1,10 +1,9 @@
 import { getApiKey } from './storage';
 
 const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent';
-const DEFAULT_KEY = 'AIzaSyDMNe8Plp2sRrWyLSFyX9Mgl0lPXzzaWbM';
 
 export async function generateCards(text, type) {
-  const apiKey = getApiKey().trim() || DEFAULT_KEY;
+  const apiKey = getApiKey().trim() || import.meta.env.VITE_GEMINI_API_KEY || '';
   if (!apiKey) {
     throw new Error('No API key set. Please enter your Gemini API key in Settings.');
   }
