@@ -1,0 +1,165 @@
+.saved-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.saved-top-bar {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.saved-logo {
+  height: 24px;
+  margin-left: auto;
+  opacity: 0.9;
+}
+
+.saved-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 640px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.saved-title {
+  font-family: var(--font-sans);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.3px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.empty-icon {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  opacity: 0.4;
+}
+
+.empty-title {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0 0 0.3rem;
+}
+
+.empty-desc {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.deck-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.deck-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.deck-card:hover {
+  border-color: var(--border-light);
+}
+
+.deck-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.deck-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.deck-card-title {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0.3rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.deck-meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+.deck-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.deck-view-btn {
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all 0.2s ease;
+}
+
+.deck-view-btn:hover {
+  background: var(--accent-hover);
+}
+
+.deck-delete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all 0.2s ease;
+}
+
+.deck-delete-btn:hover {
+  background: rgba(255, 71, 87, 0.1);
+  border-color: var(--red);
+  color: var(--red);
+}

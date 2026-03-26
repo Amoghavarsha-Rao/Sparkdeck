@@ -5,22 +5,21 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #1a1a1a;
+  background: var(--bg-primary);
   overflow: hidden;
 }
 
-/* three overlapping cards */
+/* overlapping cards */
 .card {
   position: absolute;
   left: 50%;
   top: 50%;
   width: 250px;
   height: 180px;
-  stroke-width: 1%;
-  stroke: #1a1a1a;
-  background: #ccc;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
   transform-origin: center center;
   opacity: 0;
   animation: cycle 3s infinite ease-in-out;
@@ -40,9 +39,10 @@
 .loading-text {
   position: relative;
   margin-top: 240px;
-  color: #eee;
-  font-size: 1.1rem;
-  font-family: sans-serif;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  letter-spacing: 0.3px;
 }
 
 
@@ -115,5 +115,36 @@
     transition: ease-out;
     z-index: 4;
   } */
+}
+
+/* Error state */
+.error-box {
+  text-align: center;
+  padding: 2rem;
+}
+
+.error-text {
+  color: var(--red);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.retry-button {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all 0.2s ease;
+}
+
+.retry-button:hover {
+  background: var(--bg-hover);
 }
 
